@@ -2,11 +2,26 @@
 #include <stdio.h>
 #include "Modulos/keypad.h"
 #include "Modulos/led.h"
+#include "hardware/uart.h"
+
+
+#define UART_ID uart1
+#define BAUD_RATE 115200
+#define UART_TX_PIN 4
+#define UART_RX_PIN 5
+
+
 
 int main() {
     stdio_init_all();
     setupTeclado();
     setupLeds();
+
+    uart_init(UART_ID, BAUD_RATE);
+    gpio_set_function(UART_TX_PIN, GPIO_FUNC_UART);
+    gpio_set_function(UART_RX_PIN, GPIO_FUNC_UART);
+
+    uart_puts(UART_ID, " Hello, UART!\n");
 
     char lastKey = '\0';
 

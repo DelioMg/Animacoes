@@ -66,7 +66,7 @@ target_sources(Animacoes PRIVATE
   ${CMAKE_CURRENT_LIST_DIR}/Modulos/led.c
 )
 
-pico_enable_stdio_uart(Animacoes 0)
+pico_enable_stdio_uart(Animacoes 1)
 pico_enable_stdio_usb(Animacoes 0)
 
 # Add the standard library to the build

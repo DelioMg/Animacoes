@@ -6,7 +6,7 @@
 
 // Pinos das linhas e colunas
 uint rowPins[ROWS] = {8, 7, 6, 5};
-uint colPins[COLS] = {4, 3, 2, 1};
+uint colPins[COLS] = {3, 4, 2, 1};
 
 // Mapeamento das teclas
 char keys[ROWS][COLS] = {
