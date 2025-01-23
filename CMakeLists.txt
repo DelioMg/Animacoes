@@ -54,23 +54,25 @@ add_executable(Animacoes Animacoes.c )
 pico_set_program_name(Animacoes "Animacoes")
 pico_set_program_version(Animacoes "0.1")
 
-# Modify the below lines to enable/disable output over UART/USB
+
+target_include_directories(Animacoes PRIVATE
+  ${CMAKE_CURRENT_LIST_DIR}
+  ${CMAKE_CURRENT_LIST_DIR}/Modulos
+)
+
+
+target_sources(Animacoes PRIVATE
+  ${CMAKE_CURRENT_LIST_DIR}/Modulos/keypad.c
+  ${CMAKE_CURRENT_LIST_DIR}/Modulos/led.c
+)
+
 pico_enable_stdio_uart(Animacoes 0)
 pico_enable_stdio_usb(Animacoes 0)
 
 # Add the standard library to the build
 target_link_libraries(Animacoes
-        pico_stdlib)
-
-# Add the standard include files to the build
-target_include_directories(Animacoes PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}
+  pico_stdlib
+  hardware_pwm
 )
-
-# Add any user requested libraries
-target_link_libraries(Animacoes 
-        
-        )
-
 pico_add_extra_outputs(Animacoes)
 
