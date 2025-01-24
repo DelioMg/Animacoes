@@ -10,7 +10,11 @@
 #define UART_TX_PIN 4
 #define UART_RX_PIN 5
 
-
+void controlBuzzer(char key) {
+    if (key == '#') {
+        tocar_buzzer();
+    }
+}
 
 int main() {
     stdio_init_all();
