@@ -4,8 +4,7 @@
 uint ledBLUEPin = 28;
 uint ledGREENPin = 27;
 uint ledREDPin = 26;
-uint buzzerPin = 21;
-uint slice_num;
+
 
 // Configuração dos LEDs e do buzzer.
 void setupLeds(void) {
