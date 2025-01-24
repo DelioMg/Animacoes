@@ -8,6 +8,4 @@ void setupLeds(void);
 
 void controlLeds(char key);
 
-void controlBuzzer(char key);
-
 #endif // LEDS_H
