@@ -2,7 +2,9 @@
 #include <stdio.h>
 #include "Modulos/keypad.h"
 #include "Modulos/led.h"
+#include "Modulos/buzzer.h"
 #include "hardware/uart.h"
+
 
 
 #define UART_ID uart1
@@ -10,7 +12,11 @@
 #define UART_TX_PIN 4
 #define UART_RX_PIN 5
 
-
+void controlBuzzer(char key) {
+    if (key == '#') {
+        tocar_buzzer();
+    }
+}
 
 int main() {
     stdio_init_all();
