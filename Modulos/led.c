@@ -7,7 +7,7 @@ uint ledREDPin = 26;
 uint buzzerPin = 21;
 uint slice_num;
 
-// Configuração dos LEDs e do buzzer
+// Configuração dos LEDs e do buzzer.
 void setupLeds(void) {
     // Configurar LEDs
     gpio_init(ledBLUEPin);
