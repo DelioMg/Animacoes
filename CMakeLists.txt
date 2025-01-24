@@ -64,6 +64,7 @@ target_include_directories(Animacoes PRIVATE
 target_sources(Animacoes PRIVATE
   ${CMAKE_CURRENT_LIST_DIR}/Modulos/keypad.c
   ${CMAKE_CURRENT_LIST_DIR}/Modulos/led.c
+  ${CMAKE_CURRENT_LIST_DIR}/Modulos/buzzer.c
 )
 
 pico_enable_stdio_uart(Animacoes 1)
