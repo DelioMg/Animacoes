@@ -2,7 +2,9 @@
 #include <stdio.h>
 #include "Modulos/keypad.h"
 #include "Modulos/led.h"
+#include "Modulos/buzzer.h"
 #include "hardware/uart.h"
+
 
 
 #define UART_ID uart1
