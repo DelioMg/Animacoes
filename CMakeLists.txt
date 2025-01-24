@@ -49,7 +49,7 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(Animacoes Animacoes.c )
+add_executable(Animacoes main.c )
 
 pico_set_program_name(Animacoes "Animacoes")
 pico_set_program_version(Animacoes "0.1")
