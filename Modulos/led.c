@@ -5,7 +5,6 @@ uint ledBLUEPin = 28;
 uint ledGREENPin = 27;
 uint ledREDPin = 26;
 
-
 // Configuração dos LEDs e do buzzer.
 void setupLeds(void) {
     // Configurar LEDs
