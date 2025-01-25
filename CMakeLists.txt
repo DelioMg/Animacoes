@@ -60,11 +60,13 @@ target_include_directories(Animacoes PRIVATE
   ${CMAKE_CURRENT_LIST_DIR}/Modulos
 )
 
+pico_generate_pio_header(Animacoes ${CMAKE_CURRENT_LIST_DIR}/Modulos/pio_matrix.pio)
 
 target_sources(Animacoes PRIVATE
   ${CMAKE_CURRENT_LIST_DIR}/Modulos/keypad.c
   ${CMAKE_CURRENT_LIST_DIR}/Modulos/led.c
   ${CMAKE_CURRENT_LIST_DIR}/Modulos/buzzer.c
+  ${CMAKE_CURRENT_LIST_DIR}/animacoes.c
 )
 
 pico_enable_stdio_uart(Animacoes 1)
@@ -74,6 +76,8 @@ pico_enable_stdio_usb(Animacoes 0)
 target_link_libraries(Animacoes
   pico_stdlib
   hardware_pwm
+  hardware_pio
+  hardware_clocks
 )
 pico_add_extra_outputs(Animacoes)
 
