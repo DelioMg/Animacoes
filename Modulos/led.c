@@ -5,6 +5,7 @@
 #include "hardware/clocks.h"
 #include "led.h"
 
+
 // Arquivo .pio para controle da matriz
 #include "pio_matrix.pio.h"
 
@@ -23,11 +24,13 @@ uint32_t gerar_binario_cor(double red, double green, double blue) {
 uint configurar_matriz(PIO pio) {
     bool ok = set_sys_clock_khz(128000, false);
 
+
     // Inicializa os códigos stdio padrão
     stdio_init_all();
 
     printf("Iniciando a transmissão PIO\n");
     if (ok) printf("Clock set to %ld Hz\n", clock_get_hz(clk_sys));
+
 
     // Configuração da PIO
     uint offset = pio_add_program(pio, &pio_matrix_program);
@@ -66,6 +69,7 @@ void imprimir_desenho(Matriz_leds_config configuracao, PIO pio, uint sm) {
 RGB_cod obter_cor_por_parametro_RGB(int red, int green, int blue) {
     return (RGB_cod){red / 255.0, green / 255.0, blue / 255.0};
 }
+
 
 // Configura os LEDs da matriz com base em comandos específicos
 void configurar_matriz_leds(Matriz_leds_config matriz, ComandoLED *comandos, int num_comandos) {
