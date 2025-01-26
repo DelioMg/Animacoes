@@ -1,3 +1,4 @@
+#include "pico/stdlib.h"
 #include "animacoes.h"
 
 void animacao1(Matriz_leds_config matriz) {
