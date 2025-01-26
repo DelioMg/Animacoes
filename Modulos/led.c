@@ -5,6 +5,7 @@
 #include "hardware/clocks.h"
 #include "led.h"
 
+
 // Arquivo .pio para controle da matriz
 #include "pio_matrix.pio.h"
 
@@ -69,6 +70,7 @@ RGB_cod obter_cor_por_parametro_RGB(int red, int green, int blue) {
     return (RGB_cod){red / 255.0, green / 255.0, blue / 255.0};
 }
 
+
 // Configura os LEDs da matriz com base em comandos específicos
 void configurar_matriz_leds(Matriz_leds_config matriz, ComandoLED *comandos, int num_comandos) {
     for (int i = 0; i < num_comandos; i++) {
@@ -99,3 +101,4 @@ void preencher_matriz_cor(Matriz_leds_config matriz, float red, float green, flo
     }
     imprimir_desenho(matriz, pio0, 0);
 }
+

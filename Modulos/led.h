@@ -36,3 +36,4 @@ void limpar_matriz(Matriz_leds_config matriz);
 void preencher_matriz_cor(Matriz_leds_config matriz, float red, float green, float blue);
 
 #endif // LED_H
+
